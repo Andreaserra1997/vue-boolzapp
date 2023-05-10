@@ -75,6 +75,7 @@ i {
     padding-top: .7rem;
     padding-bottom: .7rem;
     padding-inline: .5rem;
+    height: 15%;
 }
 
 .bar-settings i {
@@ -96,6 +97,16 @@ i {
     font-size: .8rem;
 }
 
+.search {
+    height: 5%;
+}
+
+.over {
+    height: 70%;
+    overflow-y: scroll;
+}
+
+
 .text-last-message {
     font-size: .7rem;
     color: gray;
@@ -107,6 +118,7 @@ i {
     flex: 1 0 auto;
     text-align: end;
     padding-right: .3rem;
+    color: gray;
 }
 
 
