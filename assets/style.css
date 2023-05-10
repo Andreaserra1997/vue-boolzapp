@@ -142,26 +142,28 @@ i {
 }
 
 .send-message {
-    display: inline-block;
     padding-top: 2.5rem;
     padding-right: 4rem;
 }
 
 .send-message span {
-    padding: .7rem 4rem .7rem .5rem;
+    display: block;
+    max-width: 250px;
+    padding: .7rem 3rem .7rem .5rem;
     border-radius: 10px;
     background-color: #D5F9BA;
     font-size: .8rem;
 }
 
 .received-message {
-    display: inline-block;
     padding-top: 7rem;
     padding-left: 4rem;
 
 }
 
 .received-message span {
+    display: block;
+    max-width: 250px;
     padding: .7rem 8rem .7rem .5rem;
     border-radius: 10px;
     background-color: white;
