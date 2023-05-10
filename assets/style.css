@@ -30,6 +30,9 @@ img {
     border-radius: 50%;
 }
 
+i {
+    color: gray;
+}
 /* Start square-left */
 
 .square-left {
@@ -38,10 +41,12 @@ img {
     background-color: #EAEAEA;
 }
 
-.top-bar-left {
+.top-bar-left,
+.top-bar-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 10%;
 }
 
 .my-avatar,
@@ -108,8 +113,53 @@ img {
 /* Start square-right */
 
 .square-right {
-    display: flex;
     height: 100%;
     width: 65%;
-    background-color: blue;
+}
+
+.top-bar-right {
+    border-left: 1px solid lightgray;
+    background-color: #EAEAEA;
+}
+
+.content-right-square {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    background-image: url(../img/mine.jpg);
+}
+
+.send-message {
+    display: inline-block;
+    padding-top: 2.5rem;
+    padding-right: 4rem;
+}
+
+.send-message span {
+    padding: .7rem 4rem .7rem .5rem;
+    border-radius: 10px;
+    background-color: #D5F9BA;
+    font-size: .8rem;
+}
+
+.received-message {
+    display: inline-block;
+    padding-top: 7rem;
+    padding-left: 4rem;
+
+}
+
+.received-message span {
+    padding: .7rem 8rem .7rem .5rem;
+    border-radius: 10px;
+    background-color: white;
+    font-size: .8rem;
+}
+
+.navbar {
+    height: 10%;
+}
+
+form {
+    width: 80%;
 }
