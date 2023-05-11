@@ -136,38 +136,38 @@ i {
 
 .content-right-square {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     height: 80%;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    overflow-y: scroll;
     background-image: url(../img/mine.jpg);
 }
 
-.send-message {
-    padding-top: 2.5rem;
-    padding-right: 4rem;
+.content-right-square .message {
+    max-width: 60%;
+    border-radius: 10px;
 }
 
-.send-message span {
-    display: block;
-    max-width: 250px;
-    padding: .7rem 3rem .7rem .5rem;
-    border-radius: 10px;
+.content-right-square .sent {
+    align-self: flex-end;
     background-color: #D5F9BA;
-    font-size: .8rem;
 }
 
-.received-message {
-    padding-top: 7rem;
-    padding-left: 4rem;
-
+.content-right-square .text {
+    padding: 1em;
+    padding-bottom: 0;
 }
 
-.received-message span {
-    display: block;
-    max-width: 250px;
-    padding: .7rem 8rem .7rem .5rem;
-    border-radius: 10px;
-    background-color: white;
-    font-size: .8rem;
+.content-right-square .received {
+    align-self: flex-start;
+    background-color: #EAEAEA;
+}
+
+.content-right-square .date {
+    text-align: end;
+    padding: .3em;
+    font-size: .6rem;
 }
 
 .navbar {

@@ -163,9 +163,10 @@ const app = Vue.createApp ({
                         }
                     ],
                 }
-            ]
+            ],
+            activeIndex: 0,
         }
-    }
-})
+    },
+});
 
 app.mount('.content');
