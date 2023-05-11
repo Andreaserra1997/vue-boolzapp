@@ -67,13 +67,12 @@
             </div>
 
             <div class="content-right-square">
-               <div v-for="messaged in contacts[activeIndex].messages" class="message sent">
-                <div v-if="messaged.status === 'sent'" class="text">{{ messaged.message }}</div> 
-                <div class="date">{{ messaged.date}}</div>
-               </div>
-               <div class="message received">
-                <div class="text">Tutto fatto!</div>
-                <div class="date">10/01/202 16:15</div>
+               <div 
+                v-for="(mes, i) in contacts[activeIndex].messages"
+                class="message"
+                :class="{received: mes.status === 'received', sent: mes.status === 'sent'}">
+                <div class="text">{{ mes.message }}</div> 
+                <div class="date">{{ mes.date }}</div>
                </div>
             </div>
 
