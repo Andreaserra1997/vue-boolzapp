@@ -165,13 +165,22 @@ const app = Vue.createApp ({
                 }
             ],
             activeIndex: 0,
+            newMessage: '',
         }
     },
     methods: {
         setActiveIndex(element) {
             this.activeIndex = this.contacts.indexOf(element);
+        },
+        addMessage() {
+            let textMex = {
+                date: '12/05/2023 12:45:00',
+                message: 'Ok',
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push({textMex});
         }
-    }
+    },
 });
 
 app.mount('.content');
