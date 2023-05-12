@@ -181,8 +181,7 @@ const app = Vue.createApp ({
                 message: this.newMessage,
                 status: 'sent'
             }
-            if (textMex.message.length == '') {
-            } else {
+            if (textMex.message !== '') {
                 this.contacts[this.activeIndex].messages.push(textMex);
                 this.newMessage = '';
             }
@@ -192,8 +191,7 @@ const app = Vue.createApp ({
                     message: 'Ok',
                     status: 'received'
                 }
-                if (textMex.message.length == '') {
-                } else {
+                if (textMex.message !== '') {
                     this.contacts[this.activeIndex].messages.push(textMexReceived);
                 }
             }, 1000)
