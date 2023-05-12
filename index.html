@@ -43,11 +43,11 @@
             <div class="search">
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                    <input v-model="searchContacts" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
                 </div>
             </div>
             <div class="over">
-                <div v-for="(contact,i) in contacts" class="avatar" @click="setActiveIndex(contact)" :class="{active: i == activeIndex}">
+                <div v-for="(contact,i) in filterContacts" class="avatar" @click="setActiveIndex(contact)" :class="{active: i == activeIndex}">
                     <img :src="contact.avatar">
                     <div class="text-avatar">
                         <div>{{ contact.name }}</div>

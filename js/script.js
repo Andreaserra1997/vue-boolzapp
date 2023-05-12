@@ -166,6 +166,7 @@ const app = Vue.createApp ({
             ],
             activeIndex: 0,
             newMessage: '',
+            searchContacts: '',
         }
     },
     methods: {
@@ -197,6 +198,13 @@ const app = Vue.createApp ({
             }, 1000)
         },
     },
+    computed: {
+        filterContacts() {
+            return this.contacts.filter((contacts) => {
+                return contacts.name.toLowerCase().includes(this.searchContacts.toLowerCase())
+            }
+        )}
+    }
 });
 
 app.mount('.content');
