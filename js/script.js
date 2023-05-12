@@ -172,14 +172,18 @@ const app = Vue.createApp ({
         setActiveIndex(element) {
             this.activeIndex = this.contacts.indexOf(element);
         },
+        extractTimeFromDate(date) {
+			return date.split(' ')[1].slice(0, -3);
+		},
         addMessage() {
             let textMex = {
-                date: '12/05/2023 12:45:00',
-                message: 'Ok',
+                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
+                message: this.newMessage,
                 status: 'sent'
             }
-            this.contacts[this.activeIndex].messages.push({textMex});
-        }
+            this.contacts[this.activeIndex].messages.push(textMex);
+            this.newMessage = '';
+        },
     },
 });
 
