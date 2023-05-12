@@ -90,7 +90,7 @@
                     <a href="#"><i class="fa-regular fa-face-smile"></i></a>
                   </span>
                   <form @submit.prevent class="d-flex">
-                    <input @keyup.enter="addMessageSend,addMessageReceived" v-model="newMessage" class="form-control me-2" type="search" placeholder="Scrivi qui un messaggio" aria-label="Search">
+                    <input @keyup.enter="addMessageSend" v-model="newMessage" class="form-control me-2" type="search" placeholder="Scrivi qui un messaggio" aria-label="Search">
                   </form>
                   <span class="navbar-brand">
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>

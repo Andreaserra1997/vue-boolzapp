@@ -186,15 +186,18 @@ const app = Vue.createApp ({
                 this.contacts[this.activeIndex].messages.push(textMex);
                 this.newMessage = '';
             }
+            setTimeout(() => {
+                let textMexReceived = {
+                    date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
+                    message: 'Ok',
+                    status: 'received'
+                }
+                if (textMex.message.length == '') {
+                } else {
+                    this.contacts[this.activeIndex].messages.push(textMexReceived);
+                }
+            }, 1000)
         },
-        addMessageReceived() {
-            let textMexReceived = {
-                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
-                message: 'Ok',
-                status: 'received'
-            }
-            this.contacts[this.activeIndex].messages.push(textMexReceived);
-        }
     },
 });
 
