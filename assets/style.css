@@ -106,6 +106,9 @@ i {
     overflow-y: scroll;
 }
 
+.active {
+    background-color: lightgray;
+}
 
 .text-last-message {
     font-size: .7rem;

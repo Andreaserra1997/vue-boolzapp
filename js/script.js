@@ -167,6 +167,11 @@ const app = Vue.createApp ({
             activeIndex: 0,
         }
     },
+    methods: {
+        setActiveIndex(element) {
+            this.activeIndex = this.contacts.indexOf(element);
+        }
+    }
 });
 
 app.mount('.content');
