@@ -175,15 +175,26 @@ const app = Vue.createApp ({
         extractTimeFromDate(date) {
 			return date.split(' ')[1].slice(0, -3);
 		},
-        addMessage() {
+        addMessageSend() {
             let textMex = {
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 message: this.newMessage,
                 status: 'sent'
             }
-            this.contacts[this.activeIndex].messages.push(textMex);
-            this.newMessage = '';
+            if (textMex.message.length == '') {
+            } else {
+                this.contacts[this.activeIndex].messages.push(textMex);
+                this.newMessage = '';
+            }
         },
+        addMessageReceived() {
+            let textMexReceived = {
+                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
+                message: 'Ok',
+                status: 'received'
+            }
+            this.contacts[this.activeIndex].messages.push(textMexReceived);
+        }
     },
 });
 
